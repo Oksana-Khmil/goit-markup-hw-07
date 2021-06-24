@@ -1,0 +1,41 @@
+.activities {
+  padding-bottom: 94px;
+  & .container {
+    display: flex;
+  }
+}
+
+.activities__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+
+  color: var(--title-text-color);
+}
+
+.activities__list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.activities__item {
+  display: inline-block;
+  position: relative;
+}
+
+.activities__description {
+  width: 100%;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--primary-white-color);
+  padding: 27px 0;
+  background: rgba(47, 48, 58, 0.8);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
