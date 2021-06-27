@@ -5,9 +5,9 @@
   font-style: normal;
 
   &__container {
+    position: relative;
     display: flex;
     align-items: baseline;
-    position: relative;
     justify-content: space-between;
   }
 }

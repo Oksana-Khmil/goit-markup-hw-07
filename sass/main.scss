@@ -4,6 +4,7 @@
 // BASE
 @import './base/common';
 @import './base/container';
+@import './base/section';
 // COMPONENTS
 @import './components/backdrop';
 @import './components/modal-form';
@@ -14,7 +15,6 @@
 @import './components/navigation';
 @import './components/main-header';
 @import './components/subscription-form';
-
 // LAYOUT
 @import './layout/clients';
 @import './layout/team';

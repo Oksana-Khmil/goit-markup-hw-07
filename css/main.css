@@ -43,6 +43,7 @@ ul,
 ol {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 img {
@@ -51,11 +52,7 @@ img {
   height: auto;
 }
 
-.list {
-  list-style: none;
-}
-
-.link {
+a {
   text-decoration: none;
 }
 
@@ -71,6 +68,44 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.section__subtitle {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  margin-bottom: 50px;
+  color: var(--title-text-color);
+}
+
+.section__features {
+  padding-bottom: 0;
+}
+
+.section__subtitle--visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6 IE7 */
+  clip: rect(1px 1px 1px 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+.section__background--team {
+  background: #f5f4fa;
+}
+
+.section__background {
+  background: var(--primary-white-color);
 }
 
 .backdrop {
@@ -109,11 +144,8 @@ body {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
-  color: var(--main-color);
-}
-
-.modal-form-field {
   margin-bottom: 10px;
+  color: var(--main-color);
 }
 
 .modal-forma-input-wrapper {
@@ -131,7 +163,6 @@ body {
   border-radius: 4px;
 }
 
-/* ========ИКОНКИ=========== */
 .modal-forma-input:focus {
   border-color: var(--accent-color);
   outline: none;
@@ -165,6 +196,11 @@ body {
   transition: border 250ms var(--cubic);
 }
 
+.modal-form-comment:focus {
+  border-color: var(--accent-color);
+  outline: none;
+}
+
 .modal-form-comment::placeholder {
   font-style: 400;
   font-size: 14px;
@@ -173,12 +209,14 @@ body {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.modal-form-comment:focus {
-  border-color: var(--accent-color);
-  outline: none;
+/* ====================КАСТОМНЫЙ ЧЕКБОКС================== */
+.modal-form-checkbox-policy {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--main-color);
 }
 
-/* ====================КАСТОМНЫЙ ЧЕКБОКС================== */
 /* .modal-form-checkbox {
   outline: none;
 } */
@@ -204,13 +242,6 @@ body {
   border-radius: 2px;
   box-shadow: none;
   transition: background-color 250ms var(--cubic);
-}
-
-.modal-form-checkbox-policy {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-  color: var(--main-color);
 }
 
 .modal-form-checkbox:focus + .modal-form-checkbox-policy::before:focus {
@@ -241,8 +272,7 @@ body {
   cursor: pointer;
 }
 
-.modal-form-btn:hover,
-.modal-form-btn:focus {
+.modal-form-btn:hover, .modal-form-btn:focus {
   outline: none;
   background-color: #188ce8;
 }
@@ -269,8 +299,8 @@ body {
 }
 
 .modal-close-btn {
-  display: block;
   position: absolute;
+  display: block;
   width: 30px;
   height: 30px;
   right: 8px;
@@ -416,19 +446,18 @@ body {
 .navigation__link {
   color: var(--title-text-color);
   transition: color 250ms var(--cubic);
-  text-decoration: none;
 }
 
 .navigation__link:hover, .navigation__link:focus {
   color: var(--accent-color);
 }
 
-.navigation__link-current {
-  text-decoration: none;
+.navigation__link--current {
   color: var(--accent-color);
 }
 
-.navigation__link-current::after {
+.navigation__link--current::after {
+  position: absolute;
   content: '';
   display: block;
   width: 100%;
@@ -437,10 +466,9 @@ body {
   margin-top: 28px;
   border-radius: 2px;
   background-color: var(--accent-color);
-  position: absolute;
 }
 
-.contact__list {
+.contact {
   display: flex;
   align-items: center;
   margin-left: auto;
@@ -460,7 +488,6 @@ body {
 
 .contact__link {
   display: flex;
-  text-decoration: none;
   align-items: center;
   color: var(--main-color);
 }
@@ -472,6 +499,8 @@ body {
 
 .contact__icon {
   display: inline-block;
+  align-items: center;
+  justify-content: center;
   margin-right: 10px;
   fill: var(--icons-color);
   transition: fill 250ms var(--cubic);
@@ -556,22 +585,6 @@ body {
 }
 
 .clients {
-  padding-top: 94px;
-  padding-bottom: 94px;
-  background: var(--primary-white-color);
-}
-
-.clients__title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: var(--title-text-color);
-  margin-bottom: 50px;
-}
-
-.clients__list {
   display: flex;
   justify-content: space-between;
 }
@@ -612,12 +625,6 @@ body {
   fill: var(--accent-color);
 }
 
-.team {
-  background: #f5f4fa;
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
 .team__card {
   text-align: center;
   margin: 0 auto;
@@ -625,16 +632,7 @@ body {
   background-color: var(--primary-white-color);
 }
 
-.team__title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-  color: var(--title-text-color);
-  margin-bottom: 50px;
-}
-
-.team__list {
+.team {
   display: flex;
   flex-wrap: wrap;
   margin-top: -30px;
@@ -734,33 +732,18 @@ body {
 }
 
 .activities {
-  padding-bottom: 94px;
-}
-
-.activities .container {
-  display: flex;
-}
-
-.activities__title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-  color: var(--title-text-color);
-}
-
-.activities__list {
   display: flex;
   justify-content: space-between;
   margin-top: 50px;
 }
 
 .activities__item {
-  display: inline-block;
   position: relative;
+  display: inline-block;
 }
 
 .activities__description {
+  position: absolute;
   width: 100%;
   font-weight: 700;
   font-size: 14px;
@@ -769,18 +752,12 @@ body {
   text-transform: uppercase;
   color: var(--primary-white-color);
   padding: 27px 0;
-  background: rgba(47, 48, 58, 0.8);
-  position: absolute;
   bottom: 0;
   left: 0;
+  background: rgba(47, 48, 58, 0.8);
 }
 
 .features {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
-.features__list {
   display: flex;
 }
 
@@ -821,9 +798,9 @@ body {
 }
 
 .footer__container {
+  position: relative;
   display: flex;
   align-items: baseline;
-  position: relative;
   justify-content: space-between;
 }
 
@@ -866,11 +843,6 @@ body {
 }
 
 .filter {
-  background-color: var(--primary-white-color);
-  padding-top: 94px;
-}
-
-.filter__list {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
@@ -907,12 +879,11 @@ body {
 
 /*===========END==FILTERS=============*/
 /*=============PROJECTS=============*/
-.project__list {
+.project {
   display: flex;
   flex-wrap: wrap;
   margin-top: -30px;
   margin-left: -30px;
-  padding-bottom: 94px;
 }
 
 /* inside  solid */
@@ -940,12 +911,12 @@ body {
 }
 
 .project__card-overlay {
+  position: absolute;
   color: var(--primary-white-color);
   padding: 63px 24px;
   width: 100%;
   height: 100%;
   background-color: rgba(33, 150, 243, 0.9);
-  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;

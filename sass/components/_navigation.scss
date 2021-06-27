@@ -25,7 +25,6 @@
 .navigation__link {
   color: var(--title-text-color);
   transition: color 250ms var(--cubic);
-  text-decoration: none;
 
   &:hover,
   &:focus {
@@ -33,10 +32,10 @@
   }
 }
 
-.navigation__link-current {
-  text-decoration: none;
+.navigation__link--current {
   color: var(--accent-color);
   &::after {
+    position: absolute;
     content: '';
     display: block;
     width: 100%;
@@ -46,11 +45,10 @@
     border-radius: 2px;
 
     background-color: var(--accent-color);
-    position: absolute;
   }
 }
 
-.contact__list {
+.contact {
   display: flex;
   align-items: center;
   margin-left: auto;
@@ -69,7 +67,6 @@
 
 .contact__link {
   display: flex;
-  text-decoration: none;
   align-items: center;
   color: var(--main-color);
 
@@ -92,6 +89,8 @@
 
 .contact__icon {
   display: inline-block;
+  align-items: center;
+  justify-content: center;
   margin-right: 10px;
   fill: var(--icons-color);
   transition: fill 250ms var(--cubic);

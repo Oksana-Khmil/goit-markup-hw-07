@@ -20,13 +20,13 @@
     <header class="main-header container">
         
                         <!-- Логотип WebStudio -->
-                <a href="" lang="en" class="webstudio link">
+                <a href="" lang="en" class="webstudio">
                     <span class="web">Web</span>Studio</a>
 
                <nav class="navigation">
                 <ul class="navigation__list">
                     <li class="navigation__item">
-                        <a class="navigation__link-current" href="">Студия</a>
+                        <a class="navigation__link navigation__link--current" href="./index.html">Студия</a>
                     </li>
                     <li class="navigation__item">
                         <a class="navigation__link" href="./portfolio.html">Портфолио</a>
@@ -37,7 +37,7 @@
                 </ul>
             </nav>
 
-            <ul class="contact__list list">
+            <ul class="contact">
                 <li class="contact__item">
                     <a class="contact__link" href="maito:info@devstudio.com">
                         <svg class="contact__icon" width="16" height="12">
@@ -66,9 +66,10 @@
 
 
         <!-- <Особенности Features> -->
-        <section class="features container">
-                <h2 class="visually-hidden">Особенности</h2>
-                <ul class="features__list list">
+    <section class="section section__features">
+        <div class="container">
+            <h2 class="section__subtitle section__subtitle--visually-hidden">Особенности</h2>
+                <ul class="features">
                     <li class="features__item">
                         <div class="features__thumb">
                             <svg width="70px" height="70px">
@@ -111,35 +112,35 @@
                             плановых заданий.</p>
                     </li>
                 </ul>
-           
-
-        </section>
-
+        </div>
+    </section>
 
 
         <!-- <ACTIVITIES> -->
-    <section class="activities container">
-        <h2 class="activities__title">Чем мы занимаемся</h2>
-            <ul class="activities__list list">
-                <li class="activities__item"><img src="./images/activities/verstka.jpg" alt="Верстка" width="370"
+<section class="section">
+    <div class="container">
+      <h2 class="section__subtitle">Чем мы занимаемся</h2>
+        <ul class="activities">
+            <li class="activities__item"><img src="./images/activities/verstka.jpg" alt="Верстка" width="370"
                             height="294" />
-                    <p class="activities__description"> Десктопные приложения</p>
-                    </li>
-                <li class="activities__item"><img src="./images/activities/stylization.jpg" alt="Стилизация" width="370"
+                <p class="activities__description"> Десктопные приложения</p>
+            </li>
+            <li class="activities__item"><img src="./images/activities/stylization.jpg" alt="Стилизация" width="370"
                             height="294" />
-                    <p class="activities__description">Мобильные приложения</p>
-                </li>
-                <li class="activities__item"><img src="./images/activities/design.jpg" alt="Дизайн" width="370"
+                <p class="activities__description">Мобильные приложения</p>
+            </li>
+            <li class="activities__item"><img src="./images/activities/design.jpg" alt="Дизайн" width="370"
                             height="294" />
-                    <p class="activities__description">Дизайнерские решения</p>
-                    </li>
-                </ul>
-        </section>
+                <p class="activities__description"> Дизайнерские решения</p>
+            </li>
+        </ul>
+    </div>
+</section>
         <!-- <TEAM> -->
-        <section class="team">
+        <section class="section section__background--team">
             <div class="container">
-                <h2 class="team__title">Наша команда</h2>
-                <ul class="team__list list">
+                <h2 class="section__subtitle">Наша команда</h2>
+                <ul class="team">
                     <li class="team__item">
                         <img src="./images/team/ihor.jpg" alt="Игорь Демьяненко" width="270" height="260" />
                         <div class="team__card">
@@ -294,9 +295,10 @@
             </div>
         </section>
         <!-- <Постоянные клиенты> -->
-        <section class="clients container">
-                <h2 class="clients__title">Постоянные клиенты</h2>
-                <ul class="clients__list list">
+        <section class="section section__background">
+            <div class="container">
+                <h2 class="section__subtitle">Постоянные клиенты</h2>
+                <ul class="clients">
                     <li class="clients__item">
                         <a class="clients__link" href="">
                             <svg class="clients__icon" width="106px" height="60px">
@@ -341,34 +343,34 @@
                     </li>
 
                 </ul>
-
+            </div>
         </section>
     </main>
 
     <!-- <Футер> -->
     <footer class="footer">
-        <div class="footer__container container">
+        <div class="container footer__container ">
                 <div class="footer-contact">
 
-            <a href="" lang="en" class="footer-webstudio link">
+            <a href="" lang="en" class="footer-webstudio">
                     <span class="web">Web</span>Studio</a>
 
                 
-                    <ul class="footer-contact__list list">
+                    <ul class="footer-contact__list">
                         <li class="footer-contact__item">
-                            <a class="footer-contact__map-link link"
+                            <a class="footer-contact__map-link"
                                 href="https://goo.gl/maps/7oAF3nw1k7qhsK217" target="_blank"
                                 rel="noopener noreferrer">г. Киев, пр-т Леси Украинки, 26</a></li>
                         <li class="footer-contact__item">
-                            <a class="footer-contact__link link" href="maito:info@devstudio.com">info@example.com</a></li>
+                            <a class="footer-contact__link" href="maito:info@devstudio.com">info@example.com</a></li>
                         <li class="footer-contact__item">
-                            <a class="footer-contact__link link" href="tel:380961111111">+38 099 111 11 11</a></li>
+                            <a class="footer-contact__link" href="tel:380961111111">+38 099 111 11 11</a></li>
                     </ul>
                 </div>
               
             <div class="footer-social">
                 <h3 class="footer-social__title">Присоединяйтесь</h3>
-                <ul class="footer-social__list list">
+                <ul class="footer-social__list">
                     <li class="footer-social__item">
                         <a class="footer-social__link" href="#" target="_blank" rel="noopener noreferrer">
                             <svg class="footer-social__icon" width="20px" height="20px">
